@@ -1,0 +1,582 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap");
+/*RESET*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 16px;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+body {
+  background-size: 100%;
+  line-height: 1.3;
+  cursor: default;
+}
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+b, strong {
+  font-weight: bold;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+/*
+  ========================================
+  Img
+  ========================================
+*/
+img,
+picture,
+video,
+embed,
+object {
+  max-width: 100%;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/**/
+body {
+  background: #091422;
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+p {
+  font-size: 1.125rem;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  margin-bottom: 20px;
+  color: #dddddd;
+}
+
+a {
+  color: #3a9bfa;
+}
+
+/*ICONES unicons*/
+.uil {
+  font-size: 22px;
+}
+
+/*CONTAINER*/
+.container {
+  margin: 0 auto;
+  max-width: 77.5rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* DESKTOP LARGE - 1400px*/
+/* DESKTOP - 1200px*/
+/* LAPTOP - 1024px*/
+/* TABLET BIG - 900px*/
+/* TABLET - 600px*/
+/* MOBILE - 400px*/
+/*
+  ========================================
+  HEADER
+  ========================================
+*/
+header {
+  padding: 40px 0;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .__logo a {
+  border: 1px solid #3a9bfa;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 8px 16px;
+}
+header .container .__right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 50px;
+}
+header .container .__right .__navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .__right .__navigation nav ul li a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+header .container .__right .__navigation nav ul li a.ativo, header .container .__right .__navigation nav ul li a:hover {
+  color: #3a9bfa;
+}
+
+/*
+  ========================================
+  FOOTER
+  ========================================
+*/
+/*
+  ========================================
+  BANNER
+  ========================================
+*/
+.banner {
+  padding: 100px 0;
+}
+.banner .__display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0 100px;
+}
+.banner .__display .__social ul {
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+}
+.banner .__display .__txt h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.banner .__display .__txt h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+.banner .__display .__txt p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.banner .__display .__txt .button_type1 {
+  margin-top: 32px;
+}
+.banner .__display .__img {
+  display: inline;
+}
+
+/*
+  ========================================
+  ABOUT ME
+  ========================================
+*/
+.about_me {
+  margin-top: 80px;
+}
+.about_me h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+.about_me h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #dddddd;
+}
+.about_me .__display {
+  margin-top: 60px;
+  display: flex;
+  gap: 0 200px;
+}
+.about_me .__display .__content {
+  width: 450px;
+}
+.about_me .__display .__content p {
+  font-weight: 300;
+}
+.about_me .__display .__content .__experience {
+  margin-top: 40px;
+}
+.about_me .__display .__content .__experience ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about_me .__display .__content .__experience ul li {
+  text-align: center;
+}
+.about_me .__display .__content .__experience ul li span {
+  font-size: 1rem;
+  font-weight: 400;
+  display: block;
+  color: #dddddd;
+}
+.about_me .__display .__content .__experience ul li span b {
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-weight: 600;
+}
+.about_me .__display .__content .button_type1 {
+  margin-top: 32px;
+}
+
+/*
+  ========================================
+  FORM 
+  ========================================
+*/
+.inputs select,
+.inputs input[type=text],
+.inputs textarea {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  padding: 1.125rem 1rem;
+  font-size: 1rem;
+  border-radius: 35px;
+  background: #f3f3f3;
+  border: 2px solid #f3f3f3;
+  outline: none;
+  color: #5b5a5a;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.5s ease;
+}
+
+.inputs textarea:focus,
+.inputs select:focus,
+.inputs input:focus {
+  border: 2px solid #0a307d;
+}
+
+.inputs select {
+  background: #efefef url("../img/seta_form.png") right 20px center no-repeat;
+  width: 100%;
+  padding: 13px 25px;
+  cursor: pointer;
+}
+
+.inputs .btn {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.inputs .btn input[type=submit] {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  color: #fff;
+  display: inline-block;
+  padding: 1.125rem 1rem;
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-top: 20px;
+  min-width: 150px;
+  border: 3px solid transparent;
+  border-radius: 10px;
+}
+.inputs .btn input[type=submit]:hover {
+  border: 3px solid #ffffff;
+  background: #206ab2;
+  color: #ffffff;
+}
+
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .inputs .margin {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+  .inputs select,
+.inputs input[type=text],
+.inputs textarea {
+    padding: 12px 30px;
+  }
+}
+/*
+  ========================================
+  MENU RESP
+  ========================================
+*/
+#dl-menu {
+  width: 100%;
+  display: none;
+}
+
+/* Common styles of menus */
+.dl-menuwrapper {
+  width: 100%;
+  position: relative;
+  perspective: 1000px;
+  perspective-origin: 50% 200%;
+  z-index: 5555;
+}
+
+.dl-menuwrapper button {
+  background: #206ab2 url("../img/menu_icon.png") right 15px center no-repeat;
+  border: none;
+  width: 100%;
+  height: 48px;
+  text-align: left;
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 15px;
+  color: #ffffff;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.dl-menuwrapper ul {
+  background: none;
+}
+
+.dl-menuwrapper button.dl-active {
+  color: #ffffff;
+  background: #091422 url("../img/menu-close.png") right 15px center no-repeat;
+}
+
+.dl-menuwrapper ul {
+  padding: 0;
+  list-style: none;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.dl-menuwrapper li {
+  position: relative;
+}
+
+.dl-menuwrapper li .down {
+  background: #14698d url(../../img/bg-header/seta-drop.png) right 20px center no-repeat;
+}
+
+.dl-menuwrapper li a {
+  background: #206ab2;
+  display: block;
+  position: relative;
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid lightgrey;
+  border-bottom: none;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.dl-menuwrapper li:last-child a {
+  border-bottom: 1px solid lightgrey;
+}
+
+.dl-menuwrapper li a:hover,
+.dl-menuwrapper li.ativo a {
+  background: #014b94;
+  color: #ffffff;
+  padding: 10px 20px 10px 40px;
+}
+
+.dl-menuwrapper li.dl-back > a {
+  /* padding-left: 40px; */
+  font-weight: 600;
+  color: #ffffff;
+  background: #0e4d68 url(../../img/seta-back.png) left 20px center no-repeat;
+}
+
+.dl-menuwrapper li.dl-back:after {
+  left: 10px;
+  color: rgba(212, 204, 198, 0.3);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.dl-menuwrapper li > a:after {
+  right: 10px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.dl-menuwrapper .dl-menu {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transform: translateY(10px);
+  transform: translateY(10px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 5555;
+}
+
+.dl-menuwrapper .dl-menu.dl-menu-toggle {
+  transition: all 0.3s ease;
+}
+
+.dl-menuwrapper .dl-menu.dl-menuopen {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+}
+
+/* Hide the inner submenus */
+.dl-menuwrapper li .dl-submenu {
+  display: none;
+}
+
+/* 
+When a submenu is openend, we will hide all li siblings.
+For that we give a class to the parent menu called "dl-subview".
+We also hide the submenu link. 
+The opened submenu will get the class "dl-subviewopen".
+All this is done for any sub-level being entered.
+*/
+.dl-menu.dl-subview li,
+.dl-menu.dl-subview li.dl-subviewopen > a,
+.dl-menu.dl-subview li.dl-subview > a {
+  display: none;
+}
+
+.dl-menu.dl-subview li.dl-subview,
+.dl-menu.dl-subview li.dl-subview .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu,
+.dl-menu.dl-subview li.dl-subviewopen > .dl-submenu > li {
+  display: block;
+}
+
+/* Dynamically added submenu outside of the menu context */
+.dl-menuwrapper > .dl-submenu {
+  position: absolute;
+  width: 100%;
+  top: 50px;
+  left: 0;
+  margin: 0;
+}
+
+/* Animation classes for moving out and in */
+.dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
+  -webkit-animation: SubMenuAnimOut4 0.4s ease;
+  animation: SubMenuAnimOut4 0.4s ease;
+}
+
+/* No JS Fallback */
+.no-js .dl-menuwrapper .dl-menu {
+  position: relative;
+  opacity: 1;
+  -webkit-transform: none;
+  transform: none;
+}
+
+.no-js .dl-menuwrapper li .dl-submenu {
+  display: block;
+}
+
+.no-js .dl-menuwrapper li.dl-back {
+  display: none;
+}
+
+.no-js .dl-menuwrapper li > a:not(:only-child) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.no-js .dl-menuwrapper li > a:not(:only-child):after {
+  content: "";
+}
+
+/* Colors for demos */
+/* Demo 4 */
+.demo-4 .dl-menuwrapper button {
+  background: #90b912;
+}
+
+.demo-4 .dl-menuwrapper button:hover,
+.demo-4 .dl-menuwrapper button.dl-active,
+.demo-4 .dl-menuwrapper ul {
+  background: #79a002;
+}
+
+/*
+  ========================================
+  BUTTONS
+  ========================================
+*/
+.button_type1 * {
+  font-size: 1rem;
+  font-weight: 300;
+  background: #3a9bfa;
+  color: #dddddd;
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 8px;
+}
+.button_type1 * i {
+  padding: 0;
+  position: relative;
+  left: 8px;
+}
+
+/**/
+/**/
+
+/*# sourceMappingURL=style.css.map */

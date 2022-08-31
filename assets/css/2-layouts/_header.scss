@@ -1,0 +1,47 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/*
+  ========================================
+  HEADER
+  ========================================
+*/
+
+header {
+  padding: 40px 0;
+
+  & .container {
+    @include main.FlexBetCen;
+
+    & .__logo a {
+      border: 1px solid main.$ColorMain;
+      color: main.$ColorTwo;
+      font-size: reset.toRem(24);
+      border-radius: 15px;
+      padding: 8px 16px;
+    }
+
+    & .__right {
+      @include main.FlexBetCen;
+      gap: 0 50px;
+
+      & .__navigation {
+          & nav ul {
+            @include main.FlexBetCen;
+    
+            & li a {
+              font-size: reset.toRem(16);
+              font-weight: 400;
+              color: main.$ColorTwo;
+              padding: 10px 20px;
+    
+              &.ativo,
+              &:hover {
+                color: main.$ColorMain;
+              }
+            }
+          }
+      }
+    }
+  }
+}

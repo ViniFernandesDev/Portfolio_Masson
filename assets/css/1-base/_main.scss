@@ -1,0 +1,127 @@
+@use 'reset';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&display=swap');
+
+
+// CONTAINER VARIABLE
+$largureContainer: reset.toRem(1240); // Adicionar 40px no valor do container para uso de padding no responsivo 
+
+// VARIABLES
+$ColorMain:#3a9bfa;
+$ColorZero:#091422;
+$ColorOne: #206ab2;
+$ColorTwo: #ffffff;
+$ColorThree:#dddddd;
+
+/**/
+body {
+   background:$ColorZero;
+   font-family: 'Poppins', sans-serif;
+   color:$ColorTwo;
+   font-weight:500;
+}
+
+p {
+   font-size: reset.toRem(18);
+   font-family: 'Poppins', sans-serif;
+   line-height: 1.6;
+   font-weight: 500;
+   letter-spacing: 0.3px;
+   margin-bottom: 20px;
+   color: $ColorThree;
+}
+
+a {
+   color:$ColorMain;
+}
+
+/*ICONES unicons*/
+.uil {
+   font-size: 22px;
+}
+
+// DISPLAY FLEX
+@mixin FlexBetCen {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+} 
+
+@mixin FlexCenCen {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+} 
+
+
+// ESTILOS E TAMANHOS DE FONTE
+@mixin titleType1 {
+   font-size: reset.toRem(48);
+   font-weight:600;
+} 
+
+@mixin titleType2 {
+   font-size: reset.toRem(36);
+   line-height: 1.2;
+   font-weight: 500;
+} 
+
+@mixin titleType3 {
+   font-size: reset.toRem(24);
+   font-weight: 400;
+} 
+
+
+@mixin paragrafo_1 {
+   font-size: reset.toRem(20);
+   font-weight: 300;
+} 
+
+@mixin paragrafo_2 {
+   font-size: reset.toRem(18);
+   font-weight: 400;
+} 
+
+@mixin paragrafo_3 {
+   font-size: reset.toRem(16);
+   font-weight: 400;
+} 
+
+// BREAKPOINTS
+
+@mixin breakpoint($point) {
+    @if $point == smashDesktopLarge {
+      @media screen and (max-width: 87.5rem) { @content ; } // 1400px
+   }
+   @else if $point == smashDesktop {
+      @media (max-width: 75rem) { @content ; } //1200px
+   }
+   @else if $point == smashLaptop {
+      @media (max-width: 64rem) { @content ; } //1024px
+   }
+     @else if $point == smashTabletBig {
+      @media (max-width: 56.25rem) { @content ; } //900px
+   }
+    @else if $point == smashTablet {
+      @media (max-width: 37.5rem)  { @content ; } //600px
+   }
+   @else if $point == smashMobile {
+      @media (max-width: 25rem)  { @content ; } //400px
+   }
+
+   @else if $point == smashContainer {
+    @media (max-width: $largureContainer)  { @content ; }
+ }
+}
+
+
+
+/*CONTAINER*/
+
+.container {
+  margin:0 auto;
+  max-width: $largureContainer;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+// largureContainer -> BREAKPOINT DA LARGURA DO CONTAINER

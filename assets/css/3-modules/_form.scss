@@ -1,0 +1,85 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/*
+  ========================================
+  FORM 
+  ========================================
+*/
+
+.inputs select,
+.inputs input[type="text"], 
+.inputs textarea {
+      -webkit-appearance: none !important;
+      -moz-appearance:     none !important;
+      padding: reset.toRem(18) reset.toRem(16);
+      font-size: reset.toRem(16);
+      border-radius: 35px;
+      background:#f3f3f3;
+      border: 2px solid #f3f3f3;
+      outline: none;
+      color: #5b5a5a;
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.5s ease;
+  }
+  
+  .inputs textarea:focus,
+  .inputs select:focus,
+  .inputs input:focus {
+      border:2px solid #0a307d;
+  }
+  
+  .inputs select {
+    background:#efefef url("../img/seta_form.png") right 20px center no-repeat;
+    width: 100%;
+    padding: 13px 25px;
+    cursor: pointer;
+  }
+
+  .inputs .btn {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .inputs .btn input[type="submit"] {
+      border:none;
+      outline: none;
+      cursor:pointer;
+      margin: 20px 0 0 0;
+      transition: all 0.3s ease;
+      font-family: 'Poppins', sans-serif;
+      background: main.$ColorTwo;
+      color: #fff;
+      display: inline-block;
+      padding: reset.toRem(18) reset.toRem(16);
+      font-size: reset.toRem(18);
+      font-weight: 400;
+      margin-top: 20px;
+      min-width: 150px;
+      border:3px solid transparent;
+      border-radius:10px;
+
+      &:hover {
+        border:3px solid main.$ColorTwo;
+        background: main.$ColorOne;
+        color:#ffffff;
+    }
+  }
+  
+  
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+    .inputs {
+        & .margin {
+            width: 100%!important;
+            margin-bottom: 20px;
+        }
+    }
+
+    .inputs select,
+    .inputs input[type="text"], 
+    .inputs textarea {
+          padding: 12px 30px;
+      }
+}
