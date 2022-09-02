@@ -12,11 +12,8 @@
                 <nav>
                     <ul>
                         <li><a href="index.php">Home</a></li>
-                        <li><a href="index.php">About</a></li>
-                        <li><a href="index.php">Skills</a></li>
-                        <li><a href="index.php">Services</a></li>
-                        <li><a href="index.php">Portfolio</a></li>
-                        <li><a href="index.php">Contact me</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="contact.php">Contact me</a></li>
                     </ul>
                 </nav>
             </div><!--__navigation-->

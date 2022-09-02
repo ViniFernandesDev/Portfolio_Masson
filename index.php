@@ -51,49 +51,36 @@
      </div><!--container-->
 </section><!-- banner -->
 
-<section class="about_me">
+<section class="services">
      <div class="container">
 
-          <h1>About Me</h1>
-          <h2>My Introduction</h2>
+          <h1 class="titleMain">Services</h1>
+          <h2 class="subTitle">What i offer</h2>
 
-          <div class="__display">
-               <div class="__img">
-                    <img src="assets/img/person.png" alt="Person">
-               </div><!--__img-->
+          <div class="__display"> 
+               <div class="__item">
+                    <i class="uil uil-web-grid"></i>
+                    <span>Ui/Ux<br> Designer</span>
+               
+                    <a href="#">View More<i>-></i></a>
+               </div><!--__item-->
 
-               <div class="__content">
-                    <p>Mussum Ipsum, cacilds vidis litro abertis. Casamentiss faiz malandris se pirulitá.Paisis, filhis, espiritis santis.Todo mundo vê os porris que eu tomo, mas ninguém vê os tombis que eu levo!</p>
+               <div class="__item">
+                    <i class="uil uil-arrow"></i>
+                    <span>Frontend<br> Developer</span>
+               
+                    <a href="#">View More<i>-></i></a>
+               </div><!--__item-->
 
-                    <div class="__experience">
-                         <ul>
-                              <li>
-                                   <span><b>08 +</b></span>
-                                   <span>Years experience</span>
-                              </li>
-
-                              <li>
-                                   <span><b>20 +</b></span>
-                                   <span>Completed Projects</span>
-                              </li>
-
-                              <li>
-                                   <span><b>5 +</b></span>
-                                   <span>Companies Worked</span>
-                              </li>
-                         </ul>
-                    </div><!--__experience-->
-
-                    <div class="button_type1 --ico_download"> 
-                         <a href="">
-                              Download CV
-                              <i class="uil uil-download-alt"></i>
-                         </a>
-                    </div><!--button_type1-->
-               </div><!--__content-->
+               <div class="__item">
+                    <i class="uil uil-pen"></i>
+                    <span>Branding<br> Designer</span>
+               
+                    <a href="#">View More<i>-></i></a>
+               </div><!--__item-->  
           </div><!--__display-->
 
      </div><!--container-->
-</section><!--about_me-->
+</section><!--services-->
 
 <?php include('footer.php'); ?>

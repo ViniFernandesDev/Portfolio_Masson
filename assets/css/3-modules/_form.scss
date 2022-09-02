@@ -8,25 +8,40 @@
 */
 
 .inputs select,
-.inputs input[type="text"], 
+.inputs input[type="text"],
+.inputs input[type="email"], 
 .inputs textarea {
+  width: 100%;
       -webkit-appearance: none !important;
       -moz-appearance:     none !important;
-      padding: reset.toRem(18) reset.toRem(16);
-      font-size: reset.toRem(16);
-      border-radius: 35px;
-      background:#f3f3f3;
+      padding: reset.toRem(28) reset.toRem(14) reset.toRem(8) reset.toRem(14);
+      font-size: reset.toRem(15);
+      border-radius: 8px;
+      background:main.$ColorThree;
       border: 2px solid #f3f3f3;
       outline: none;
-      color: #5b5a5a;
+      color: main.$ColorOne;
       font-family: 'Poppins', sans-serif;
       transition: all 0.5s ease;
   }
   
+  .inputs .margin {
+    position: relative;
+    margin-bottom: 24px;
+
+    & label {
+      position: absolute;
+      left: 16px;
+      top: 8px;
+      color: main.$ColorZero;
+    }
+  }
+
   .inputs textarea:focus,
   .inputs select:focus,
   .inputs input:focus {
-      border:2px solid #0a307d;
+      border:2px solid main.$ColorMain;
+      color: main.$ColorMain;
   }
   
   .inputs select {
@@ -42,28 +57,17 @@
     justify-content: end;
   }
 
-  .inputs .btn input[type="submit"] {
-      border:none;
-      outline: none;
-      cursor:pointer;
-      margin: 20px 0 0 0;
-      transition: all 0.3s ease;
-      font-family: 'Poppins', sans-serif;
-      background: main.$ColorTwo;
-      color: #fff;
-      display: inline-block;
-      padding: reset.toRem(18) reset.toRem(16);
-      font-size: reset.toRem(18);
-      font-weight: 400;
-      margin-top: 20px;
-      min-width: 150px;
-      border:3px solid transparent;
-      border-radius:10px;
+  .inputs .button_type1.--type_submit {
+      & i {
+        position: relative;
+        left: -26px;
+        height: 48px;
+        top: 1px;
+        padding: 14px 10px;
+          }
 
       &:hover {
-        border:3px solid main.$ColorTwo;
-        background: main.$ColorOne;
-        color:#ffffff;
+
     }
   }
   

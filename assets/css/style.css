@@ -176,13 +176,62 @@ header .container .__right .__navigation nav ul li a.ativo, header .container ._
   FOOTER
   ========================================
 */
+footer {
+  background: #3a9bfa;
+  padding: 40px 0;
+  box-shadow: 0px -5px 22px 0px #3a9bfa;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .__logo {
+  display: flex;
+  flex-direction: column;
+}
+footer .container .__logo a {
+  border: 1px solid #3a9bfa;
+  color: #ffffff;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  padding: 8px 16px;
+}
+footer .container .__navigation nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 25px;
+}
+footer .container .__navigation nav ul li a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px 20px;
+}
+footer .container .__navigation nav ul li a.ativo, footer .container .__navigation nav ul li a:hover {
+  color: #3a9bfa;
+}
+footer .container .__social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 25px;
+}
+footer .last_content {
+  text-align: center;
+  margin-top: 60px;
+  opacity: 0.6;
+  font-weight: 300;
+}
+
 /*
   ========================================
   BANNER
   ========================================
 */
 .banner {
-  padding: 100px 0;
+  padding: 100px 0 50px 0;
 }
 .banner .__display {
   display: flex;
@@ -208,7 +257,7 @@ header .container .__right .__navigation nav ul li a.ativo, header .container ._
   margin-bottom: 32px;
 }
 .banner .__display .__txt p {
-  font-size: 1.25rem;
+  font-size: 1.375rem;
   font-weight: 300;
 }
 .banner .__display .__txt .button_type1 {
@@ -220,25 +269,54 @@ header .container .__right .__navigation nav ul li a.ativo, header .container ._
 
 /*
   ========================================
+  SERVICES
+  ========================================
+*/
+.services {
+  margin: 80px 0;
+}
+.services .__display {
+  display: flex;
+  justify-content: center;
+  gap: 0 30px;
+  margin-top: 60px;
+}
+.services .__display .__item {
+  width: 300px;
+  background: #142438;
+  border-radius: 8px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 24px 0;
+  padding: 32px 40px;
+}
+.services .__display .__item > i {
+  color: #3a9bfa;
+  font-size: 2rem;
+}
+.services .__display .__item span {
+  font-size: 1.375rem;
+  font-weight: 300;
+}
+
+/*
+  ========================================
+  PORTFOLIO
+  ========================================
+*/
+.portfolio {
+  margin: 80px 0;
+}
+
+/*
+  ========================================
   ABOUT ME
   ========================================
 */
 .about_me {
-  margin-top: 80px;
-}
-.about_me h1 {
-  font-size: 2.25rem;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 8px;
-  text-align: center;
-}
-.about_me h2 {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 8px;
-  text-align: center;
-  color: #dddddd;
+  margin: 80px 0;
 }
 .about_me .__display {
   margin-top: 60px;
@@ -279,29 +357,104 @@ header .container .__right .__navigation nav ul li a.ativo, header .container ._
 
 /*
   ========================================
+  SKILLS
+  ========================================
+*/
+.skills {
+  margin: 80px 0;
+}
+
+/*
+  ========================================
+  CONTACT
+  ========================================
+*/
+.contact {
+  margin: 80px 0;
+}
+.contact .display {
+  display: flex;
+  justify-content: flex-start;
+  gap: 0 100px;
+  margin-top: 60px;
+}
+.contact .display .__information {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+}
+.contact .display .__information .__item {
+  display: flex;
+  align-items: center;
+  gap: 0 16px;
+}
+.contact .display .__information .__item span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #dddddd;
+  font-weight: 100;
+}
+.contact .display .__information .__item span.__title {
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 3px;
+  font-weight: 600;
+}
+.contact .display .__form {
+  width: 600px;
+}
+.contact .display .__form .espacamento {
+  display: flex;
+  gap: 30px;
+}
+.contact .display .__form .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*
+  ========================================
   FORM 
   ========================================
 */
 .inputs select,
 .inputs input[type=text],
+.inputs input[type=email],
 .inputs textarea {
+  width: 100%;
   -webkit-appearance: none !important;
   -moz-appearance: none !important;
-  padding: 1.125rem 1rem;
-  font-size: 1rem;
-  border-radius: 35px;
-  background: #f3f3f3;
+  padding: 1.75rem 0.875rem 0.5rem 0.875rem;
+  font-size: 0.9375rem;
+  border-radius: 8px;
+  background: #dddddd;
   border: 2px solid #f3f3f3;
   outline: none;
-  color: #5b5a5a;
+  color: #206ab2;
   font-family: "Poppins", sans-serif;
   transition: all 0.5s ease;
+}
+
+.inputs .margin {
+  position: relative;
+  margin-bottom: 24px;
+}
+.inputs .margin label {
+  position: absolute;
+  left: 16px;
+  top: 8px;
+  color: #091422;
 }
 
 .inputs textarea:focus,
 .inputs select:focus,
 .inputs input:focus {
-  border: 2px solid #0a307d;
+  border: 2px solid #3a9bfa;
+  color: #3a9bfa;
 }
 
 .inputs select {
@@ -317,30 +470,13 @@ header .container .__right .__navigation nav ul li a.ativo, header .container ._
   justify-content: end;
 }
 
-.inputs .btn input[type=submit] {
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 20px 0 0 0;
-  transition: all 0.3s ease;
-  font-family: "Poppins", sans-serif;
-  background: #ffffff;
-  color: #fff;
-  display: inline-block;
-  padding: 1.125rem 1rem;
-  font-size: 1.125rem;
-  font-weight: 400;
-  margin-top: 20px;
-  min-width: 150px;
-  border: 3px solid transparent;
-  border-radius: 10px;
+.inputs .button_type1.--type_submit i {
+  position: relative;
+  left: -26px;
+  height: 48px;
+  top: 1px;
+  padding: 14px 10px;
 }
-.inputs .btn input[type=submit]:hover {
-  border: 3px solid #ffffff;
-  background: #206ab2;
-  color: #ffffff;
-}
-
 /* TABLET - 600px*/
 @media (max-width: 37.5rem) {
   .inputs .margin {
@@ -574,6 +710,27 @@ All this is done for any sub-level being entered.
   padding: 0;
   position: relative;
   left: 8px;
+}
+
+/*
+  ========================================
+  TITLES
+  ========================================
+*/
+.titleMain {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  font-weight: 500;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subTitle {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #dddddd;
 }
 
 /**/

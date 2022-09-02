@@ -6,3 +6,57 @@
   FOOTER
   ========================================
 */
+
+footer {
+  background: main.$ColorMain;
+  padding: 40px 0;
+  box-shadow: 0px -5px 22px 0px main.$ColorMain;
+
+  & .container {
+    @include main.FlexBetCen;
+
+    & .__logo {
+      display: flex;
+      flex-direction: column;
+
+      & a {
+        border: 1px solid main.$ColorMain;
+        color: main.$ColorTwo;
+        font-size: reset.toRem(24);
+        border-radius: 15px;
+        padding: 8px 16px;
+      }
+    }
+
+    & .__navigation {
+      & nav ul {
+        @include main.FlexBetCen;
+        gap: 0 25px;
+
+        & li a {
+          font-size: reset.toRem(16);
+          font-weight: 400;
+          color: main.$ColorTwo;
+          padding: 10px 20px;
+
+          &.ativo,
+          &:hover {
+            color: main.$ColorMain;
+          }
+        }
+      }
+    }
+
+    & .__social {
+      @include main.FlexCenCen;
+      gap: 0 25px;
+    }
+}
+
+  & .last_content {
+    text-align: center;
+    margin-top: 60px;
+    opacity: 0.6;
+    font-weight: 300;
+  }
+}

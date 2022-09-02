@@ -1,0 +1,21 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/*
+  ========================================
+  TITLES
+  ========================================
+*/
+
+.titleMain {
+  @include main.titleType2;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.subTitle  {
+  @include main.paragrafo_3;
+  margin-bottom: 8px;
+  text-align: center;
+  color: main.$ColorThree;
+}

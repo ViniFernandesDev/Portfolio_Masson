@@ -11,6 +11,8 @@ $ColorZero:#091422;
 $ColorOne: #206ab2;
 $ColorTwo: #ffffff;
 $ColorThree:#dddddd;
+$ColorFour:#142438;
+
 
 /**/
 body {
@@ -72,7 +74,7 @@ a {
 
 
 @mixin paragrafo_1 {
-   font-size: reset.toRem(20);
+   font-size: reset.toRem(22);
    font-weight: 300;
 } 
 
