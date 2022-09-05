@@ -58,19 +58,16 @@
   }
 
   .inputs .button_type1.--type_submit {
+    cursor: pointer;
+
       & i {
         position: relative;
         left: -26px;
-        height: 48px;
+        height: 46px;
         top: 1px;
         padding: 14px 10px;
-          }
-
-      &:hover {
-
+      }
     }
-  }
-  
   
 /* TABLET - 600px*/ 
 @include main.breakpoint(smashTablet) {

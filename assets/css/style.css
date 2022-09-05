@@ -279,7 +279,7 @@ footer .last_content {
   display: flex;
   justify-content: center;
   gap: 0 40px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .services .__display .__item {
   width: 280px;
@@ -303,6 +303,73 @@ footer .last_content {
 
 /*
   ========================================
+  PORTFOLIO
+  ========================================
+*/
+.portfolio .__display {
+  margin-top: 30px;
+}
+.portfolio .__display ul {
+  display: grid;
+  grid-template-columns: repeat(3, 280px);
+  grid-template-rows: repeat(2, 280px);
+  justify-content: center;
+  gap: 40px;
+}
+.portfolio .__display ul li {
+  background: #cdcdcd;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+.portfolio .__display ul li img {
+  position: absolute;
+}
+.portfolio .__display ul li::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
+  background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 14%, rgba(0, 0, 0, 0.6) 28%, rgba(0, 0, 0, 0.5) 41%, rgba(28, 41, 51, 0.4) 54%, rgba(125, 185, 232, 0) 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 14%, rgba(0, 0, 0, 0.6) 28%, rgba(0, 0, 0, 0.5) 41%, rgba(28, 41, 51, 0.4) 54%, rgba(125, 185, 232, 0) 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 14%, rgba(0, 0, 0, 0.6) 28%, rgba(0, 0, 0, 0.5) 41%, rgba(28, 41, 51, 0.4) 54%, rgba(125, 185, 232, 0) 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#e6000000", endColorstr="#007db9e8",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.portfolio .__display ul li div {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+  padding: 16px 24px;
+}
+.portfolio .__display ul li div h3 {
+  display: inline-block;
+  background: #3a9bfa;
+  color: #091422;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 4px 8px;
+}
+.portfolio .__display ul li:nth-child(3) {
+  grid-row: span 2;
+}
+.portfolio .__display ul li:nth-child(4) {
+  grid-column: span 2;
+}
+
+/*
+  ========================================
   ARCHIVES
   ========================================
 */
@@ -313,7 +380,7 @@ footer .last_content {
   display: flex;
   justify-content: center;
   gap: 0 40px;
-  margin-top: 60px;
+  margin-top: 30px;
 }
 .archives .__display .__item {
   width: 300px;
@@ -492,7 +559,22 @@ footer .last_content {
   ========================================
 */
 .contact {
-  margin: 80px 0;
+  padding: 80px 0;
+  background: url("../img/backgound_form.jpg") center no-repeat;
+  position: relative;
+}
+.contact::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.contact .container {
+  position: relative;
+  z-index: 2;
 }
 .contact .display {
   display: flex;
@@ -536,6 +618,91 @@ footer .last_content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+/*
+  ========================================
+  BLOG
+  ========================================
+*/
+.archivesBlog {
+  margin: 80px 0;
+}
+.archivesBlog .__search {
+  max-width: 980px;
+  margin: 0 auto;
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+}
+.archivesBlog .__search div {
+  width: 273px;
+  display: flex;
+  gap: 0 6px;
+}
+.archivesBlog .__search input[type=search] {
+  width: 100%;
+  background: #091422;
+  border: 2px solid #6086b3;
+  font-size: 15px;
+  padding: 8px 15px 8px 10px;
+  color: #fff;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  border-radius: 4px;
+  transition: 0.3s all;
+}
+.archivesBlog .__search input[type=search]:focus {
+  border: 2px solid #3a9bfa;
+}
+.archivesBlog .__search input[type=submit] {
+  background: url("../img/lupa.png") center no-repeat;
+  background-size: 25px;
+  border: none;
+  height: 100%;
+  width: 60px;
+  cursor: pointer;
+  transition: 0.3s all;
+  border-radius: 8px;
+}
+.archivesBlog .__search input[type=submit]:hover {
+  background: #3a9bfa url("../img/lupa.png") center no-repeat;
+  background-size: 25px;
+}
+.archivesBlog .__display {
+  display: flex;
+  justify-content: center;
+  gap: 0 40px;
+  margin-top: 30px;
+}
+.archivesBlog .__display .__item {
+  width: 300px;
+  background: #142438;
+  border-radius: 8px;
+}
+.archivesBlog .__display .__item img {
+  border-radius: 8px;
+}
+.archivesBlog .__display .__item .__txt {
+  padding: 16px 24px;
+}
+.archivesBlog .__display .__item .__txt h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.archivesBlog .__display .__item .__information {
+  width: 100%;
+  padding: 8px 24px;
+  border-top: 1px solid #6086b3;
+  display: flex;
+  gap: 0 8px;
+}
+.archivesBlog .__display .__item .__information span {
+  font-size: 0.75rem;
+  font-weight: 100;
+  color: #6086b3;
 }
 
 /*
@@ -592,19 +759,24 @@ footer .last_content {
   justify-content: end;
 }
 
+.inputs .button_type1.--type_submit {
+  cursor: pointer;
+}
 .inputs .button_type1.--type_submit i {
   position: relative;
   left: -26px;
-  height: 48px;
+  height: 46px;
   top: 1px;
   padding: 14px 10px;
 }
+
 /* TABLET - 600px*/
 @media (max-width: 37.5rem) {
   .inputs .margin {
     width: 100% !important;
     margin-bottom: 20px;
   }
+
   .inputs select,
 .inputs input[type=text],
 .inputs textarea {
@@ -826,6 +998,7 @@ All this is done for any sub-level being entered.
   display: inline-block;
   padding: 14px 24px;
   border-radius: 8px;
+  cursor: pointer;
 }
 .button_type1 * i {
   padding: 0;
@@ -854,6 +1027,7 @@ All this is done for any sub-level being entered.
   color: #dddddd;
 }
 
-/**/ /**/
+/**/
+/**/
 
 /*# sourceMappingURL=style.css.map */

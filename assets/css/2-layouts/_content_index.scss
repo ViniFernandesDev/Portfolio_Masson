@@ -65,7 +65,7 @@
     display: flex;
     justify-content: center;
     gap: 0 40px;
-    margin-top: 60px;
+    margin-top: 30px;
 
     & .__item {
       width: 280px;
@@ -92,6 +92,79 @@
 
 /*
   ========================================
+  PORTFOLIO
+  ========================================
+*/
+
+.portfolio {
+  & .__display {
+    margin-top: 30px;
+    
+    & ul {
+      display: grid;
+      grid-template-columns: repeat(3, 280px);
+      grid-template-rows: repeat(2, 280px);
+      justify-content: center;
+      gap: 40px;
+
+      & li {
+        background: #cdcdcd;
+        overflow: hidden;
+        position: relative;
+        @include main.FlexCenCen;
+        border-radius: 8px;
+
+        & img {
+          position: absolute;
+        }
+
+        &::before {
+          content: '';
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          z-index: 2;
+
+          /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
+          background: -moz-linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 14%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.5) 41%, rgba(28,41,51,0.4) 54%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+          background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+        }
+
+        & div {
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          z-index: 2;
+          padding: 16px 24px;
+
+          & h3 {
+            display: inline-block;
+            background: main.$ColorMain;
+            color: main.$ColorZero;
+            font-weight: 600;
+            border-radius: 8px;
+            padding: 4px 8px;
+          }
+        }
+      }
+  
+      & li:nth-child(3) {
+        grid-row: span 2;
+      }
+
+      & li:nth-child(4) {
+        grid-column: span 2;
+      }
+    }
+  }
+}
+
+/*
+  ========================================
   ARCHIVES
   ========================================
 */
@@ -103,7 +176,7 @@
     display: flex;
     justify-content: center;
     gap: 0 40px;
-    margin-top: 60px;
+    margin-top: 30px;
 
     & .__item {
       width: 300px;

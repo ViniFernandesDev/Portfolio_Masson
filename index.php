@@ -83,7 +83,41 @@
      </div><!--container-->
 </section><!--services-->
 
-<section class="archives">
+<section class="portfolio">
+     <div class="container">
+
+          <h1 class="titleMain">Portfolio</h1>
+          <h2 class="subTitle"></h2>
+
+          <div class="__display"> 
+               <ul>
+                    <li>
+                         <img src="assets/img/bolos-no-pote.jpg" alt="Pot Cake"> 
+                         <div><h3>Pot Cake</h3></div>
+                    </li>
+
+                    <li>
+                         <img src="assets/img/bolos-no-pote.jpg" alt="Pot Cake"> 
+                         <div><h3>Pot Cake</h3></div>
+                    </li>
+
+                    <li>
+                         <img src="assets/img/bolos-no-pote.jpg" alt="Pot Cake"> 
+                         <div><h3>Pot Cake</h3></div>
+                    </li>
+
+                    <li>
+                         <img src="assets/img/bolos-no-pote.jpg" alt="Pot Cake"> 
+                         <div><h3>Pot Cake</h3></div>
+                    </li>
+
+               </ul>
+          </div><!--__display-->
+
+     </div><!--container-->
+</section><!--portfolio-->
+
+<section class="archivesBlog">
      <div class="container">
 
           <h1 class="titleMain">Archives</h1>
@@ -136,6 +170,6 @@
           </div><!--__display-->
 
      </div><!--container-->
-</section><!--services-->
+</section><!--archivesBlog-->
 
 <?php include('footer.php'); ?>
