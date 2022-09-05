@@ -400,11 +400,90 @@ footer .last_content {
 
 /*
   ========================================
-  SKILLS
+  QUALIFICATION
   ========================================
 */
-.skills {
+.qualification {
   margin: 80px 0;
+}
+.qualification .__tabs {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.qualification .__tabs button {
+  border: none;
+  background: none;
+  display: inline-block;
+  color: #3a9bfa;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.qualification .__line_time {
+  margin: 0 auto;
+  margin-top: 40px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.qualification .__line_time::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 98%;
+  background: #3a9bfa;
+  top: 0;
+}
+.qualification .__line_time .__item {
+  width: 500px;
+  display: flex;
+}
+.qualification .__line_time .__item .__align {
+  height: 100%;
+  width: 200px;
+  text-align: right;
+  position: relative;
+  padding-bottom: 20px;
+}
+.qualification .__line_time .__item .__align div {
+  display: inline-block;
+}
+.qualification .__line_time .__item .__align::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #3a9bfa;
+  border-radius: 50%;
+  right: -60px;
+  margin-top: 1px;
+}
+.qualification .__line_time .__item .__align h3 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.qualification .__line_time .__item .__align h4 {
+  color: #6086b3;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.qualification .__line_time .__item .__align span {
+  margin-top: 8px;
+  color: #6086b3;
+  font-size: 0.875rem;
+}
+.qualification .__line_time .__item:nth-child(2n) {
+  justify-content: flex-end;
+}
+.qualification .__line_time .__item:nth-child(2n) div {
+  text-align: left;
+}
+.qualification .__line_time .__item:nth-child(2n) ::after {
+  right: inherit;
+  left: -60px;
 }
 
 /*
@@ -526,7 +605,6 @@ footer .last_content {
     width: 100% !important;
     margin-bottom: 20px;
   }
-
   .inputs select,
 .inputs input[type=text],
 .inputs textarea {
@@ -776,7 +854,6 @@ All this is done for any sub-level being entered.
   color: #dddddd;
 }
 
-/**/
-/**/
+/**/ /**/
 
 /*# sourceMappingURL=style.css.map */

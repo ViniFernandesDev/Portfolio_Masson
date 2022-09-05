@@ -70,6 +70,74 @@
           <h1 class="titleMain">Qualification</h1>
           <h2 class="subTitle">My personal journey</h2>
 
+          <div class="__tabs">
+               <button href="">Education</button>
+               <button href="">Work</button>
+          </div><!--__tabs-->
+
+          <div class="__line_time"> 
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+               <div class="__item">
+                    <div class="__align">
+                         <div>
+                              <h3>Computer Enginer</h3>
+                              <h4>Peru - University</h4>
+                              <span>2009 - 2014</span>
+                         </div>
+                    </div>
+               </div><!--__item-->
+
+          </div><!--__line_time-->
+
      </div><!--container-->
 </section><!--qualification-->
 
