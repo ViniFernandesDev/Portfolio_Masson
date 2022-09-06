@@ -101,7 +101,7 @@ p {
   font-size: 1.125rem;
   font-family: "Poppins", sans-serif;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 300;
   letter-spacing: 0.3px;
   margin-bottom: 20px;
   color: #dddddd;
@@ -703,6 +703,147 @@ footer .last_content {
   font-size: 0.75rem;
   font-weight: 100;
   color: #6086b3;
+}
+
+/*
+  ========================================
+  BLOG DETALHES
+  ========================================
+*/
+.blogDetails {
+  padding-bottom: 60px;
+}
+.blogDetails h1 {
+  margin-bottom: 32px;
+}
+.blogDetails .__imgDestaq {
+  text-align: center;
+  margin-bottom: 16px;
+}
+.blogDetails .__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  color: #6086b3;
+  font-weight: 300;
+  font-size: 0.9375rem;
+}
+.blogDetails .__info .__author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0 16px;
+}
+.blogDetails h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.blogDetails p {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+/*
+  ========================================
+  PORTFOLIO
+  ========================================
+*/
+.portfolioDetails {
+  padding-bottom: 100px;
+}
+.portfolioDetails .__display {
+  margin-top: 48px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolioDetails .__display ul {
+  display: flex;
+  gap: 0 10px;
+}
+.portfolioDetails .__display ul li {
+  border-right: 1px solid #6086b3;
+  padding: 0 16px;
+}
+.portfolioDetails .__display ul li:last-child {
+  border: none;
+}
+.portfolioDetails .__display ul li span {
+  display: block;
+  margin-bottom: 8px;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.portfolioDetails .__display ul li span mark {
+  background: none;
+  font-size: 1.375rem;
+  font-weight: 300;
+  color: #3a9bfa;
+  font-weight: 500;
+}
+.portfolioDetails .__display .collaborators {
+  position: relative;
+}
+.portfolioDetails .__display .collaborators .__button {
+  background: #3a9bfa;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.portfolioDetails .__display .collaborators .__tooltip {
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  position: absolute;
+  transition: 0.3s all;
+  width: 300px;
+  right: 0;
+  background: #142438;
+  border: 1px solid #3a9bfa;
+  border-radius: 4px;
+}
+.portfolioDetails .__display .collaborators .__tooltip a {
+  display: flex;
+  align-items: center;
+  gap: 8px 16px;
+  padding: 16px 16px;
+  transition: 0.3s all;
+}
+.portfolioDetails .__display .collaborators .__tooltip a .__img {
+  width: 50px;
+  height: 50px;
+  background: #cdcdcd;
+}
+.portfolioDetails .__display .collaborators .__tooltip a .__img img {
+  border-radius: 8px;
+}
+.portfolioDetails .__display .collaborators .__tooltip a .__txt span {
+  display: block;
+  color: #dddddd;
+  font-size: 1.125rem;
+  font-weight: 400;
+  font-weight: 300;
+}
+.portfolioDetails .__display .collaborators .__tooltip a .__txt span.small {
+  font-size: 1rem;
+  font-weight: 400;
+}
+.portfolioDetails .__display .collaborators .__tooltip a:hover {
+  background: #206ab2;
+}
+.portfolioDetails .__display .collaborators:hover .__tooltip {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+.portfolioDetails p {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 /*

@@ -1,0 +1,116 @@
+@use '../1-base/main.scss';
+@use '../1-base/reset.scss';
+
+/*
+  ========================================
+  PORTFOLIO
+  ========================================
+*/
+
+.portfolioDetails {
+    padding-bottom: 100px;
+
+    & .__display {
+        margin-top: 48px;
+        margin-bottom: 32px;
+        @include main.FlexBetCen;
+        
+        & ul {
+            display: flex;
+            gap: 0 10px;
+
+            & li {
+                border-right: 1px solid main.$ColorFive;
+                padding: 0 16px;
+
+                &:last-child {
+                    border: none;
+                }
+
+                & span {
+                    display: block;
+                    margin-bottom: 8px;
+                    color: main.$ColorTwo;
+                    font-weight: 300;
+                    @include main.paragrafo_3;
+
+                    & mark {
+                        background: none;
+                        @include main.paragrafo_1;
+                        color: main.$ColorMain;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        & .collaborators {
+            position: relative;
+
+            & .__button {
+                background: main.$ColorMain;
+                padding: 8px 16px;
+                border-radius: 8px;
+                cursor: pointer;
+            }
+
+            & .__tooltip {
+                opacity: 0;
+                z-index: -1;
+                visibility: hidden;
+                position: absolute;
+                transition: 0.3s all;
+                width: 300px;
+                right: 0;
+                background: main.$ColorFour;
+                border: 1px solid main.$ColorMain;
+                border-radius: 4px;
+
+                & a {
+                    display: flex;
+                    align-items: center;
+                    gap: 8px 16px;
+                    padding: 16px 16px;
+                    transition: 0.3s all;
+
+                    & .__img {
+                        width: 50px;
+                        height: 50px;
+                        background: #cdcdcd;
+
+                        & img {
+                            border-radius: 8px;
+                        }
+                    }
+
+                    & .__txt {
+                        & span {
+                            display: block;
+                            color: main.$ColorThree;
+                            @include main.paragrafo_2;
+                            font-weight: 300;
+
+                            &.small {
+                                @include main.paragrafo_3;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        background: main.$ColorOne;
+                    }
+                }
+            }
+
+            &:hover .__tooltip{
+                opacity: 1;
+                visibility: visible;
+                z-index: 1;
+            }
+        }
+    }
+
+    & p {
+        @include main.paragrafo_3;
+    }
+}
