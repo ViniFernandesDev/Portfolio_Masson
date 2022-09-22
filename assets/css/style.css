@@ -124,6 +124,18 @@ a {
   padding-right: 20px;
 }
 
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  p {
+    font-size: 1rem;
+  }
+}
+/* MOBILE - 400px*/
+@media (max-width: 25rem) {
+  p {
+    font-size: 0.9375rem !important;
+  }
+}
 /* DESKTOP LARGE - 1400px*/
 /* DESKTOP - 1200px*/
 /* LAPTOP - 1024px*/
@@ -803,6 +815,38 @@ RESPONSIVE
   margin-top: 32px;
 }
 
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .about_me {
+    margin: 40px 0 50px 0;
+  }
+  .about_me .__display {
+    margin-top: 30px;
+    gap: 0 100px;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  .about_me .__display {
+    flex-wrap: wrap;
+  }
+  .about_me .__display .__img {
+    width: 100%;
+    text-align: center;
+  }
+  .about_me .__display .__content {
+    width: 100%;
+  }
+  .about_me .__display .__content .__experience ul {
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .about_me .__display .__content .button_type1 {
+    margin-top: 25px;
+    text-align: center;
+  }
+}
 /*
   ========================================
   QUALIFICATION
@@ -891,6 +935,53 @@ RESPONSIVE
   left: -60px;
 }
 
+/************
+RESPONSIVE
+************/
+/* RESPONSIVE - 500px*/
+@media screen and (max-width: 500px) {
+  .qualification {
+    margin: 40px 0;
+  }
+  .qualification .__tabs {
+    margin-top: 25px;
+  }
+  .qualification .__line_time {
+    margin-top: 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .qualification .__line_time .__item {
+    width: 378px;
+  }
+  .qualification .__line_time .__item .__align {
+    width: 180px;
+    padding-right: 20px;
+  }
+  .qualification .__line_time .__item .__align::after {
+    right: -19px;
+  }
+  .qualification .__line_time .__item .__align h3 {
+    font-size: 0.9375rem;
+  }
+  .qualification .__line_time .__item .__align h4 {
+    font-size: 0.875rem;
+  }
+  .qualification .__line_time .__item .__align span {
+    font-size: 0.75rem;
+  }
+  .qualification .__line_time .__item:nth-child(2n) {
+    justify-content: flex-end;
+  }
+  .qualification .__line_time .__item:nth-child(2n) .__align {
+    padding-right: 0;
+    padding-left: 20px;
+  }
+  .qualification .__line_time .__item:nth-child(2n) ::after {
+    right: inherit;
+    left: -19px;
+  }
+}
 /*
   ========================================
   CONTACT
@@ -958,6 +1049,43 @@ RESPONSIVE
   align-items: center;
 }
 
+/*************
+RESPONSIVE
+*************/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .contact {
+    padding: 40px 0;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  .contact .display {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px 100px;
+    margin-top: 30px;
+  }
+  .contact .display .__information {
+    width: 100%;
+  }
+  .contact .display .__information .__item {
+    width: 260px;
+    margin: 0 auto;
+  }
+  .contact .display .__information .__item span.__title {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  .contact .display .__form {
+    width: 100%;
+    order: -1;
+  }
+  .contact .display .__form .espacamento {
+    flex-wrap: wrap;
+    gap: 0 30px;
+  }
+}
 /*
   ========================================
   BLOG
@@ -1146,6 +1274,8 @@ RESPONSIVE
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 15px;
   margin-bottom: 40px;
   color: #6086b3;
   font-weight: 300;
@@ -1167,6 +1297,29 @@ RESPONSIVE
   font-weight: 400;
 }
 
+/***********
+RESPOSIVE
+************/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .blogDetails {
+    padding: 40px 0 50px 0;
+  }
+  .blogDetails h1 {
+    margin-bottom: 25px;
+  }
+  .blogDetails h2 {
+    font-size: 1.25rem;
+    margin-bottom: 14px;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .blogDetails .__info {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+}
 /*
   ========================================
   PORTFOLIO
@@ -1268,6 +1421,91 @@ RESPONSIVE
   font-weight: 400;
 }
 
+/************
+RESPONSIVE
+************/
+/* LAPTOP - 1024px*/
+@media (max-width: 64rem) {
+  .portfolioDetails {
+    padding: 40px 0;
+  }
+  .portfolioDetails .__display {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    gap: 20px 30px;
+  }
+  .portfolioDetails .__display ul {
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+  .portfolioDetails .__display ul li {
+    padding: 0 12px;
+  }
+  .portfolioDetails .__display ul li span {
+    font-size: 0.9375rem;
+  }
+  .portfolioDetails .__display ul li span mark {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  .portfolioDetails .__display .collaborators .__button {
+    padding: 5px 12px;
+  }
+  .portfolioDetails .__display .collaborators .__tooltip a .__txt span {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .portfolioDetails .__display .collaborators .__tooltip a .__txt span.small {
+    font-size: 0.9375rem;
+  }
+}
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
+  .portfolioDetails .__display ul {
+    width: 100%;
+    justify-content: center;
+  }
+  .portfolioDetails .__display .collaborators {
+    margin: 0 auto;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .portfolioDetails .__display ul {
+    width: 100%;
+    justify-content: center;
+    gap: 0;
+  }
+  .portfolioDetails .__display ul li {
+    width: 50%;
+    text-align: center;
+    border-bottom: 1px solid #6086b3;
+    padding-top: 8px;
+  }
+  .portfolioDetails .__display ul li span {
+    font-size: 0.875rem;
+  }
+  .portfolioDetails .__display ul li span mark {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .portfolioDetails .__display ul li:nth-child(2) {
+    border-right: 0;
+  }
+  .portfolioDetails .__display ul li:nth-child(3), .portfolioDetails .__display ul li:nth-child(4) {
+    border-bottom: 0;
+  }
+  .portfolioDetails .__display .collaborators {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  .portfolioDetails .__display .collaborators .__tooltip {
+    right: inherit;
+    top: 38px;
+  }
+}
 /*
   ========================================
   FORM 
@@ -1333,8 +1571,8 @@ RESPONSIVE
   padding: 14px 10px;
 }
 
-/* TABLET - 600px*/
-@media (max-width: 37.5rem) {
+/* TABLET BIG - 900px*/
+@media (max-width: 56.25rem) {
   .inputs .margin {
     width: 100% !important;
     margin-bottom: 20px;
@@ -1342,8 +1580,9 @@ RESPONSIVE
 
   .inputs select,
 .inputs input[type=text],
+.inputs input[type=email],
 .inputs textarea {
-    padding: 12px 30px;
+    padding: inherit 30px;
   }
 }
 /*
@@ -1595,6 +1834,13 @@ All this is done for any sub-level being entered.
   .titleMain {
     font-size: 1.875rem;
     font-weight: 500;
+  }
+}
+/* TABLET - 600px*/
+@media (max-width: 37.5rem) {
+  .titleMain {
+    font-size: 1.5rem;
+    font-weight: 400;
   }
 }
 /**/

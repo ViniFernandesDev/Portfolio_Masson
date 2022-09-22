@@ -222,6 +222,8 @@ RESPONSIVE
 
   & .__info {
     @include main.FlexBetCen;
+    flex-wrap: wrap;
+    gap: 10px 15px;
     margin-bottom: 40px;
     color: main.$ColorFive;
     font-weight: 300;
@@ -240,5 +242,36 @@ RESPONSIVE
 
   & p {
     @include main.paragrafo_3;
+  }
+}
+
+/***********
+RESPOSIVE
+************/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .blogDetails {
+    padding: 40px 0 50px 0;
+  
+    & h1 {
+      margin-bottom: 25px;
+    }
+
+    & h2 {
+      font-size: reset.toRem(20);
+      margin-bottom: 14px;
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .blogDetails {
+  
+    & .__info {
+      justify-content: flex-start;
+      margin-bottom: 20px;
+    }
   }
 }

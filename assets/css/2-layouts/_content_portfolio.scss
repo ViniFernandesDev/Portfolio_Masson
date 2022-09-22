@@ -114,3 +114,122 @@
         @include main.paragrafo_3;
     }
 }
+
+/************
+RESPONSIVE
+************/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+    .portfolioDetails {
+        padding: 40px 0;
+    
+        & .__display {
+            margin-top: 30px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            gap: 20px 30px;
+            
+            & ul {
+                flex-wrap: wrap;
+                gap: 6px 10px;
+    
+                & li {
+                    padding: 0 12px;
+
+                    & span {
+                        font-size: reset.toRem(15);
+    
+                        & mark {
+                            @include main.paragrafo_2;
+                        }
+                    }
+                }
+            }
+    
+            & .collaborators {
+                & .__button {
+                    padding: 5px 12px;
+                }
+    
+                & .__tooltip {
+                    & a {
+                        & .__txt {
+                            & span {
+                                @include main.paragrafo_3;
+    
+                                &.small {
+                                    font-size: reset.toRem(15);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+    .portfolioDetails {
+        & .__display {           
+            & ul {
+                width: 100%;
+                justify-content: center;
+            }
+
+            & .collaborators {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+    .portfolioDetails {
+        & .__display {           
+            & ul {
+                width: 100%;
+                justify-content: center;
+                gap: 0;
+
+                & li {
+                    width: 50%;
+                    text-align: center;
+                    border-bottom: 1px solid main.$ColorFive;
+                    padding-top: 8px;
+
+                    & span {
+                        font-size: reset.toRem(14);
+    
+                        & mark {
+                            @include main.paragrafo_3;
+                        }
+                    }
+                }
+
+                & li:nth-child(2) {
+                    border-right: 0;
+                }
+
+                & li:nth-child(3),
+                & li:nth-child(4) {
+                    border-bottom: 0;
+                }
+            }
+
+            & .collaborators {
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+
+                & .__tooltip {
+                    right: inherit;
+                    top: 38px;
+                }
+            }
+        }
+    }
+}

@@ -138,3 +138,17 @@ a {
 }
 
 // largureContainer -> BREAKPOINT DA LARGURA DO CONTAINER
+
+/* TABLET BIG - 900px*/ 
+@include breakpoint(smashTabletBig) {
+   p {
+      font-size: reset.toRem(16);
+   }
+}
+
+/* MOBILE - 400px*/ 
+@include breakpoint(smashMobile) {
+   p {
+      font-size: reset.toRem(15)!important;
+   }
+}

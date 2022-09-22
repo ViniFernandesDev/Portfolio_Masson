@@ -69,8 +69,9 @@
       }
     }
   
-/* TABLET - 600px*/ 
-@include main.breakpoint(smashTablet) {
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) { 
     .inputs {
         & .margin {
             width: 100%!important;
@@ -79,8 +80,9 @@
     }
 
     .inputs select,
-    .inputs input[type="text"], 
+    .inputs input[type="text"],
+    .inputs input[type="email"], 
     .inputs textarea {
-          padding: 12px 30px;
+          padding: inherit 30px;
       }
 }

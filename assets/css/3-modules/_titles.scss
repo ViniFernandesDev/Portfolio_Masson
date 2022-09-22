@@ -26,3 +26,10 @@
     @include main.titleType2_2;
   }
 }
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .titleMain {
+    @include main.titleType3;
+  }
+}

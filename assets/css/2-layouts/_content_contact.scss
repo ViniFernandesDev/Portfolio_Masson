@@ -80,4 +80,51 @@
   }
   
   
+/*************
+RESPONSIVE
+*************/
+
+  /* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .contact {
+    padding: 40px 0;
+  }
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  .contact {
+
+    & .display {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px 100px;
+      margin-top: 30px;
   
+      & .__information {
+        width: 100%;
+  
+        & .__item {
+          width: 260px;
+          margin: 0 auto;
+  
+          & span {
+            &.__title {
+              @include main.paragrafo_2;
+            }
+          }
+        }
+      }
+  
+      & .__form {
+        width: 100%;
+        order: -1;
+      
+        & .espacamento {
+          flex-wrap: wrap;
+          gap: 0 30px;
+        }
+      }
+    }
+  }
+}
