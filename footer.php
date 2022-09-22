@@ -36,3 +36,13 @@
 
 <script type="text/javascript" src="assets/js/modernizr.js"></script>
 <script type="text/javascript" src="assets/js/jquery.js"></script>
+<script src="assets/js/swiper/swiper-bundle.min.js"></script>
+
+
+<script>
+    $(document).ready(function() {
+        $('.menu_mobile').click(function() {
+            $(this).toggleClass("ativo");
+        });
+    });
+</script>

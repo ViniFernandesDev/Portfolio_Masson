@@ -45,3 +45,113 @@ header {
     }
   }
 }
+
+/*************
+RESPONSIVE
+*************/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) { 
+  header {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: main.$ColorZero;
+    width: 100%;
+    z-index: 1000;
+    padding: 14px 0;
+    box-shadow: 0px -2px 13px 0px #3a9bfa;
+
+    & .container {
+
+      & .__logo {
+        & a {
+          padding: 3px 8px;
+          font-size: reset.toRem(16);
+          background: main.$ColorMain;
+        }
+      }
+
+      & .__right {
+        gap: 0 30px;
+        
+        & .__navigation {
+          position: relative;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+
+          & .buttonType1 a {
+            font-size: reset.toRem(16);
+          }
+
+          & .menu_mobile {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+          }
+
+          & .button {
+            height: 35px;
+            width: 35px;
+            background: main.$ColorMain url("../img/menu_icon.png") center no-repeat;
+            transition: 0.3s all;
+            border-radius: 5px;
+          }
+
+          & nav {
+            position: absolute;
+            right: 0;
+            top: 38px;
+            width: 200px;
+            background: #ededed;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            z-index: -1;
+            visibility: collapse;
+            transition: 0.2s all;
+            border-radius: 6px;
+            box-shadow: -2px 1px 9px -4px #000000;
+            border-radius: 5px 5px 5px 5px;
+
+            & ul {
+              display: flex;
+              flex-wrap: wrap;
+              width: 100%;
+
+              & li {
+                width: 100%;
+
+                & a {
+                  width: 100%;
+                  display: block;
+                  font-size: reset.toRem(16)!important;
+                  color: main.$ColorOne;
+                }
+              }
+            }
+          }
+
+          & .menu_mobile.ativo {
+            & nav {
+              opacity: 1;
+              visibility: visible;
+              z-index: inherit;
+            }
+
+            & .button {
+              background: main.$ColorMain url("../img/menu-close.png") center no-repeat;
+            }
+          }
+        } // NAVIGATION
+
+        & .__theme {
+          color: main.$ColorMain;
+          & i {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,3 +10,5 @@
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" type="text/css" href="assets/js/swiper/swiper-bundle.min.css"/>

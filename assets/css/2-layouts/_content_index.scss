@@ -50,7 +50,107 @@
   }
 }
 
+/*************
+RESPONSIVE
+*************/
 
+/* DESKTOP - 1200px*/ 
+@include main.breakpoint(smashDesktop) {
+  .banner {
+    & .__display {
+      gap: 0 40px;
+      justify-content: space-between;
+  
+      & .__txt {
+        & h1 {
+          @include main.titleType1_2;
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .banner {
+    padding: 30px 0;
+  }
+}
+
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  .banner {
+
+    & .__display {
+      flex-wrap: wrap;
+      position: relative;
+  
+      & .__txt {
+        width: 100%;
+        padding-top: 25px;
+
+        & h1 {
+          @include main.titleType2;
+          font-weight: 600;
+        }
+
+        & h2 {
+          @include main.paragrafo_1;
+          margin-bottom: 25px;
+        }
+
+        & p {
+          @include main.paragrafo_2;
+        }
+      }
+
+      & .__img {
+        order: -1;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      & .__social {
+        width: 100%;
+
+        & ul {
+          justify-content: center;
+          flex-direction: inherit;
+          gap: 0 15px;
+        }
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .banner {
+    & .__display {
+      & .__txt {
+        & h1 {
+          @include main.titleType2_2;
+        }
+
+        & h2 {
+          @include main.paragrafo_2;
+          font-weight: 500;
+        }
+
+        & p {
+          @include main.paragrafo_3;
+        }
+      }
+    }
+  }
+}
 
 /*
   ========================================
@@ -77,14 +177,82 @@
       justify-content: flex-end;
       gap: 24px 0;
       padding: 32px 40px;
+      box-shadow: 2px 2px 13px 0px main.$ColorFour;
 
       & > i {
         color: main.$ColorMain;
         font-size: reset.toRem(32);
       }
 
+      & a {
+        padding: 5px 0;
+        transition: 0.3s all;
+
+        & i {
+          font-style: normal;
+          margin-left: 6px;
+          transition: 0.3s all;
+        }
+      }
+
+      & a:hover {
+
+        & i {
+          margin-left: 15px;
+        }
+      }
+
       & span {
         @include main.paragrafo_1;
+      }
+    }
+  }
+}
+
+/**************
+RESPONSIVE
+**************/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .services {
+    margin: 30px 0;
+  }
+}
+
+/* TABLET BIG - 900px*/ 
+@include main.breakpoint(smashTabletBig) {
+  .services {
+    & .__display {
+      gap: 25px 30px;
+      flex-wrap: wrap;
+  
+      & .__item {
+        width: 250px;
+      }
+    }
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .services {
+    & .__display {
+      gap: 20px 4%;
+  
+      & .__item {
+        width: 46%;
+        height: 220px;
+        padding: 25px 20px;
+  
+        & > i {
+          color: main.$ColorMain;
+          font-size: reset.toRem(25);
+        }
+  
+        & span {
+          @include main.paragrafo_2;
+        }
       }
     }
   }
@@ -95,8 +263,9 @@
   PORTFOLIO
   ========================================
 */
-
 .portfolio {
+  margin: 80px 0;
+
   & .__display {
     margin-top: 30px;
     
@@ -111,27 +280,32 @@
         background: #cdcdcd;
         overflow: hidden;
         position: relative;
-        @include main.FlexCenCen;
         border-radius: 8px;
-
+  
+        & a {
+          @include main.FlexCenCen;
+          height: 100%;
+          width: 100%;
+        }
+  
         & img {
           position: absolute;
         }
-
+  
         &::before {
           content: '';
           position: absolute;
           height: 100%;
           width: 100%;
           z-index: 2;
-
+  
           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
           background: -moz-linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 14%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.5) 41%, rgba(28,41,51,0.4) 54%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
           background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
           background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
         }
-
+  
         & div {
           position: absolute;
           height: 100%;
@@ -140,7 +314,7 @@
           align-items: flex-end;
           z-index: 2;
           padding: 16px 24px;
-
+  
           & h3 {
             display: inline-block;
             background: main.$ColorMain;
@@ -155,72 +329,156 @@
       & li:nth-child(3) {
         grid-row: span 2;
       }
-
+  
       & li:nth-child(4) {
         grid-column: span 2;
       }
     }
-  }
+  } // DISPLAY
 }
 
-/*
-  ========================================
-  ARCHIVES
-  ========================================
-*/
+.mySwiperPorfolio {
+  display: none;
 
-.archives {
-  margin: 80px 0;
-
-  & .__display {
-    display: flex;
-    justify-content: center;
-    gap: 0 40px;
-    margin-top: 30px;
-
-    & .__item {
-      width: 300px;
-      background: main.$ColorFour;
+  & .swiper-slide {
+    & a {
+      @include main.FlexCenCen;
+      height: 200px;
+      width: 100%;
+      background: #cdcdcd;
+      overflow: hidden;
+      position: relative;
       border-radius: 8px;
-
-      & img {
-        border-radius: 8px;
-      }
-
-      & .__txt {
-        padding: 16px 24px;
-
-        & h2 {
-          @include main.paragrafo_2;
-          margin-bottom:24px;
-        }
-      }
-
-      & .__information {
+      &::before {
+        content: '';
+        position: absolute;
+        height: 100%;
         width: 100%;
-        padding: 8px 24px;
-        border-top: 1px solid main.$ColorFive;
-        display: flex;
-        gap: 0 8px;
-
-        & span {
-          font-size: reset.toRem(12);
-          font-weight: 100;
-          color: main.$ColorFive;
-        }
+        z-index: 2;
+  
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
+        background: -moz-linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 14%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.5) 41%, rgba(28,41,51,0.4) 54%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(45deg, rgba(0,0,0,0.9) 0%,rgba(0,0,0,0.7) 14%,rgba(0,0,0,0.6) 28%,rgba(0,0,0,0.5) 41%,rgba(28,41,51,0.4) 54%,rgba(125,185,232,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6000000', endColorstr='#007db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
       }
+    }
+
+    & img {
+      position: absolute;
+    }
+
+    & div {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      z-index: 2;
+      padding: 16px 24px;
+
+      & h3 {
+        display: inline-block;
+        background: main.$ColorMain;
+        color: main.$ColorZero;
+        font-weight: 600;
+        border-radius: 8px;
+        padding: 4px 8px;
+      }
+    }
+  }
+
+  .__nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+
+    & .center {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50px;
+        margin: 10px 0 0 0;
+        gap: 5px;
+
+        & div {
+            left: inherit;
+            right: inherit;
+            top: inherit;
+            position: inherit;
+            
+        }
+
+        & .swiper-button-prev {
+            order: -1;
+            transform: rotateZ(180deg);
+        }
+
+        & .swiper-button-next,
+        & .swiper-button-prev {
+            height: 44px;
+            width: 44px;
+            border-radius: 5px;
+            background: #F2F7FA;
+            background-size: 35px;
+            transition: 0.3s all;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        & .swiper-button-next {
+          padding-top: 4px;
+        }
+
+        & .swiper-button-next:hover,
+        & .swiper-button-prev:hover {
+            background: main.$ColorOne;
+            background-size: 35px;
+            color: #ffffff;
+        }
+
+        & .swiper-button-next::after, 
+        & .swiper-button-prev::after {
+            content: '';
+        }
     }
   }
 }
 
+/**************
+RESPONSIVE
+**************/
 
-/*
-  ========================================
-  PORTFOLIO
-  ========================================
-*/
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  .portfolio {
+    margin: 50px 0;
 
-.portfolio {
-  margin: 80px 0;
+    & .display_none_desktop {
+      display: none;
+    }
+  }
+
+  .portfolio .mySwiperPorfolio {
+    display: block;
+    margin-top: 15px;
+    padding-bottom: 60px;
+  }
+}
+
+/* TABLET - 600px*/ 
+@include main.breakpoint(smashTablet) {
+  .mySwiperPorfolio {
+    & .swiper-slide {
+      & a {
+        height: 260px;
+        width: 260px;
+        margin: 0 auto;
+      }
+    }
+  }
 }
 

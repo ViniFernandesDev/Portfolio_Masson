@@ -60,3 +60,50 @@ footer {
     font-weight: 300;
   }
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: main.$ColorFour;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0px -5px 22px 0px main.$ColorMain;
+  border-radius: 6px;
+}
+
+/***********
+RESPONSIVE
+***********/
+
+/* LAPTOP - 1024px*/ 
+@include main.breakpoint(smashLaptop) {
+  footer {
+    padding: 20px 0 80px 0;
+  
+    & .container {
+      & .__navigation {
+        display: none
+      }
+  }
+  
+    & .last_content {
+      margin-top: 20px;
+    }
+  }  
+}
+
+/* MOBILE - 400px*/ 
+@include main.breakpoint(smashMobile) {
+  footer {
+    padding: 15px 0 80px 0;
+  
+    & .container {
+      flex-direction: column;
+      align-items: center;
+      gap: 25px 0;
+    }
+  }  
+}

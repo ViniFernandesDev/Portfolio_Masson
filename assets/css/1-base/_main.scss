@@ -13,8 +13,7 @@ $ColorTwo: #ffffff;
 $ColorThree:#dddddd;
 $ColorFour:#142438;
 $ColorFive:#6086b3;
-
-
+ 
 /**/
 body {
    background:$ColorZero;
@@ -62,9 +61,20 @@ a {
    font-weight:600;
 } 
 
+@mixin titleType1_2 {
+   font-size: reset.toRem(40);
+   font-weight:600;
+} 
+
+
 @mixin titleType2 {
    font-size: reset.toRem(36);
    line-height: 1.2;
+   font-weight: 500;
+} 
+
+@mixin titleType2_2 {
+   font-size: reset.toRem(30);
    font-weight: 500;
 } 
 

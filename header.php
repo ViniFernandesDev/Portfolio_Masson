@@ -9,13 +9,17 @@
 
         <div class="__right">
             <div class="__navigation">
-                <nav>
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="contact.php">Contact me</a></li>
-                    </ul>
-                </nav>
+                <div class="menu_mobile">
+                    <div class="button"></div>
+                    
+                    <nav>
+                        <ul>
+                            <li><a href="index.php">Home</a></li>
+                            <li><a href="about.php">About</a></li>
+                            <li><a href="contact.php">Contact me</a></li>
+                        </ul>
+                    </nav>
+                </div><!--menu_mobile-->
             </div><!--__navigation-->
 
             <div class="__theme">
