@@ -174,13 +174,15 @@ header .container .__right .__navigation nav ul {
   align-items: center;
 }
 header .container .__right .__navigation nav ul li a {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 400;
   color: #ffffff;
   padding: 10px 20px;
+  transition: 0.3s all;
 }
 header .container .__right .__navigation nav ul li a.ativo, header .container .__right .__navigation nav ul li a:hover {
   color: #3a9bfa;
+  text-shadow: 1px 1px 1px #3a9bfa;
 }
 
 /*************
@@ -227,34 +229,37 @@ RESPONSIVE
     border-radius: 5px;
   }
   header .container .__right .__navigation nav {
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 38px;
-    width: 200px;
-    background: #ededed;
+    bottom: 63px;
+    width: 100%;
+    background: #142438;
     display: flex;
     flex-direction: column;
     opacity: 0;
     z-index: -1;
     visibility: collapse;
     transition: 0.2s all;
-    border-radius: 6px;
-    box-shadow: -2px 1px 9px -4px #000000;
-    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0px -2px 13px 0px #3a9bfa;
   }
   header .container .__right .__navigation nav ul {
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
+    flex-wrap: wrap;
   }
   header .container .__right .__navigation nav ul li {
-    width: 100%;
+    width: 33%;
+    text-align: center;
   }
   header .container .__right .__navigation nav ul li a {
     width: 100%;
     display: block;
     font-size: 1rem !important;
-    color: #206ab2;
+    color: #ffffff;
+  }
+  header .container .__right .__navigation nav ul li a:hover {
+    color: #ffffff;
+    opacity: 0.6;
   }
   header .container .__right .__navigation .menu_mobile.ativo nav {
     opacity: 1;
@@ -269,6 +274,15 @@ RESPONSIVE
   }
   header .container .__right .__theme i {
     font-size: 25px;
+  }
+}
+/* MOBILE - 400px*/
+@media (max-width: 25rem) {
+  header .container .__right .__navigation nav ul {
+    justify-content: center;
+  }
+  header .container .__right .__navigation nav ul li {
+    width: 100%;
   }
 }
 /*
@@ -304,19 +318,31 @@ footer .container .__navigation nav ul {
   gap: 0 25px;
 }
 footer .container .__navigation nav ul li a {
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 400;
   color: #ffffff;
   padding: 10px 20px;
+  transition: 0.3s all;
 }
 footer .container .__navigation nav ul li a.ativo, footer .container .__navigation nav ul li a:hover {
-  color: #3a9bfa;
+  color: #142438;
+  text-shadow: 0 0 4px #142438;
 }
 footer .container .__social {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 25px;
+}
+footer .container .__social a * {
+  color: #ffffff;
+  transition: 0.3s all;
+}
+footer .container .__social a i {
+  font-size: 25px;
+}
+footer .container .__social a:hover * {
+  color: #142438;
 }
 footer .last_content {
   text-align: center;
@@ -384,6 +410,12 @@ RESPONSIVE
   display: flex;
   flex-direction: column;
   gap: 24px 0;
+}
+.banner .__display .__social ul li * {
+  transition: 0.3s all;
+}
+.banner .__display .__social ul li a:hover * {
+  color: #fff;
 }
 .banner .__display .__txt h1 {
   font-size: 3rem;
@@ -526,14 +558,30 @@ RESPONSIVE
   margin-left: 6px;
   transition: 0.3s all;
 }
+.services .__display .__item a:hover {
+  text-shadow: 0 0 2px #3a9bfa;
+}
 .services .__display .__item a:hover i {
   margin-left: 15px;
+  animation: seta_right 1s infinite;
+  text-shadow: none;
 }
 .services .__display .__item span {
   font-size: 1.375rem;
   font-weight: 300;
 }
 
+@keyframes seta_right {
+  0% {
+    margin-left: 6px;
+  }
+  50% {
+    margin-left: 15px;
+  }
+  100% {
+    margin-left: 6px;
+  }
+}
 /**************
 RESPONSIVE
 **************/
@@ -612,6 +660,7 @@ RESPONSIVE
   height: 100%;
   width: 100%;
   z-index: 2;
+  transition: 0.4s all;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
   background: -moz-linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.7) 14%, rgba(0, 0, 0, 0.6) 28%, rgba(0, 0, 0, 0.5) 41%, rgba(28, 41, 51, 0.4) 54%, rgba(125, 185, 232, 0) 100%);
   /* FF3.6-15 */
@@ -638,6 +687,10 @@ RESPONSIVE
   font-weight: 600;
   border-radius: 8px;
   padding: 4px 8px;
+}
+.portfolio .__display ul li:hover::before {
+  background: #3a9bfa;
+  opacity: 0.6;
 }
 .portfolio .__display ul li:nth-child(3) {
   grid-row: span 2;
@@ -858,16 +911,36 @@ RESPONSIVE
 .qualification .__tabs {
   margin-top: 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  gap: 0 20px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.qualification .__tabs * {
+  color: #ffffff;
 }
 .qualification .__tabs button {
   border: none;
   background: none;
-  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.375rem;
+  font-weight: 300;
+  gap: 0 10px;
+  width: 50%;
+  transition: 0.3s all;
+  cursor: pointer;
+}
+.qualification .__tabs button i {
+  order: -1;
+  font-size: 40px;
+  transition: 0.3s all;
+}
+.qualification .__tabs button:hover i, .qualification .__tabs button:hover {
   color: #3a9bfa;
-  font-size: 1.125rem;
-  font-weight: 400;
 }
 .qualification .__line_time {
   margin: 0 auto;
@@ -941,10 +1014,19 @@ RESPONSIVE
 /* RESPONSIVE - 500px*/
 @media screen and (max-width: 500px) {
   .qualification {
-    margin: 40px 0;
+    margin: 50px 0;
   }
   .qualification .__tabs {
-    margin-top: 25px;
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  .qualification .__tabs button {
+    font-size: 1.125rem;
+    font-weight: 400;
+  }
+  .qualification .__tabs button i {
+    font-size: 30px;
   }
   .qualification .__line_time {
     margin-top: 30px;
@@ -1159,6 +1241,10 @@ RESPONSIVE
   font-weight: 400;
   margin-bottom: 24px;
 }
+.archivesBlog .__item .__txt a:hover {
+  color: #ffffff;
+  transition: 0.3s all;
+}
 .archivesBlog .__item .__information {
   width: 100%;
   padding: 8px 24px;
@@ -1182,7 +1268,7 @@ RESPONSIVE
 /* LAPTOP - 1024px*/
 @media (max-width: 64rem) {
   .archivesBlog {
-    margin: 50px 0;
+    margin: 50px 0 !important;
   }
   .archivesBlog .__item {
     width: 260px;
@@ -1190,6 +1276,10 @@ RESPONSIVE
 }
 /* TABLET BIG - 900px*/
 @media (max-width: 56.25rem) {
+  .archivesBlog .__search {
+    justify-content: center;
+    margin-bottom: 25px;
+  }
   .archivesBlog .__display {
     margin-top: 20px;
   }
@@ -1364,11 +1454,16 @@ RESPOSIVE
 .portfolioDetails .__display .collaborators {
   position: relative;
 }
-.portfolioDetails .__display .collaborators .__button {
+.portfolioDetails .__display .collaborators .__button a {
   background: #3a9bfa;
   padding: 8px 16px;
   border-radius: 8px;
   cursor: pointer;
+  color: #fff;
+  display: block;
+}
+.portfolioDetails .__display .collaborators .__button a i {
+  color: #fff;
 }
 .portfolioDetails .__display .collaborators .__tooltip {
   opacity: 0;
@@ -1563,12 +1658,21 @@ RESPONSIVE
 .inputs .button_type1.--type_submit {
   cursor: pointer;
 }
+.inputs .button_type1.--type_submit input {
+  padding-right: 40px;
+}
 .inputs .button_type1.--type_submit i {
   position: relative;
-  left: -26px;
+  left: -40px;
   height: 46px;
   top: 1px;
   padding: 14px 10px;
+}
+
+.inputs .button_type1.--type_submit:hover i,
+.inputs .button_type1.--type_submit:hover input {
+  background: #ffffff;
+  color: #3a9bfa;
 }
 
 /* TABLET BIG - 900px*/
@@ -1796,16 +1900,45 @@ All this is done for any sub-level being entered.
   font-size: 1rem;
   font-weight: 300;
   background: #3a9bfa;
+  border: none;
   color: #dddddd;
   display: inline-block;
   padding: 14px 24px;
   border-radius: 8px;
   cursor: pointer;
+  transition: 0.3s all;
 }
 .button_type1 * i {
   padding: 0;
   position: relative;
   left: 8px;
+}
+
+.button_type1 input,
+.button_type1 a {
+  box-shadow: 0 0 0 #3a9bfa;
+}
+
+.button_type1 input:hover,
+.button_type1 a:hover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #ffffff;
+  }
+  50% {
+    box-shadow: 0 0 40px #3a9bfa;
+  }
+  100% {
+    box-shadow: 0 0 0 #3a9bfa;
+  }
+}
+.button_type1 a:hover i,
+.button_type1 a:hover {
+  background: #ffffff;
+  color: #3a9bfa;
 }
 
 /*

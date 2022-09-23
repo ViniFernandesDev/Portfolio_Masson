@@ -71,8 +71,9 @@
           <h2 class="subTitle">My personal journey</h2>
 
           <div class="__tabs">
-               <button href="">Education</button>
-               <button href="">Work</button>
+               <button href="">Education <i class="uil uil-graduation-cap"></i></button>
+               |
+               <button href="">Work <i class="uil uil-briefcase-alt"></i></button>
           </div><!--__tabs-->
 
           <div class="__line_time"> 

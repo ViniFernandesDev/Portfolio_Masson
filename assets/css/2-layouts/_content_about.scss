@@ -105,14 +105,38 @@
 
     & .__tabs {
       margin-top: 40px;
-      @include main.FlexCenCen;
+      @include main.FlexBetCen;
+      gap: 0 20px;
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 60px;
+
+      & * {
+        color: #ffffff;
+      }
 
       & button {
         border: none;
         background: none;
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include main.paragrafo_1;
+        gap: 0 10px;
+        width: 50%;
+        transition: 0.3s all;
+        cursor: pointer;
+
+        & i {
+          order: -1;
+          font-size: 40px;
+          transition: 0.3s all;
+        }
+      }
+
+      & button:hover i,
+      & button:hover {
         color: main.$ColorMain;
-        @include main.paragrafo_2;
       }
     }
 
@@ -202,10 +226,20 @@ RESPONSIVE
 /* RESPONSIVE - 500px*/ 
 @media screen and (max-width:500px) {
   .qualification {
-    margin: 40px 0;
-
+    margin: 50px 0;
+  
     & .__tabs {
-      margin-top: 25px;
+      width: 100%;
+      margin-top: 30px;
+      margin-bottom: 20px;
+
+      & button {
+        @include main.paragrafo_2;
+
+        & i {
+          font-size: 30px;
+        }
+      }
     }
 
     & .__line_time {

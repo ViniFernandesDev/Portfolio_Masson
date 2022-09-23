@@ -21,6 +21,14 @@
         display: flex;
         flex-direction: column;
         gap: 24px 0;
+
+        & li * {
+          transition: 0.3s all;
+        }
+
+        & li a:hover * {
+          color: #fff;
+        }
       }
     }
 
@@ -196,9 +204,12 @@ RESPONSIVE
       }
 
       & a:hover {
+        text-shadow: 0 0 2px main.$ColorMain;
 
         & i {
           margin-left: 15px;
+          animation: seta_right 1s infinite;
+          text-shadow: none
         }
       }
 
@@ -206,6 +217,20 @@ RESPONSIVE
         @include main.paragrafo_1;
       }
     }
+  }
+}
+
+@keyframes seta_right {
+  0% {
+    margin-left: 6px;
+  }
+
+  50% {
+    margin-left: 15px;
+  }
+
+  100% {
+    margin-left: 6px;
   }
 }
 
@@ -298,6 +323,7 @@ RESPONSIVE
           height: 100%;
           width: 100%;
           z-index: 2;
+          transition: 0.4s all;
   
           /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+0,000000+41,7db9e8+100&0.9+0,0.7+14,0.6+28,0.5+41,0.4+54,0+100 */
           background: -moz-linear-gradient(45deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 14%, rgba(0,0,0,0.6) 28%, rgba(0,0,0,0.5) 41%, rgba(28,41,51,0.4) 54%, rgba(125,185,232,0) 100%); /* FF3.6-15 */
@@ -324,6 +350,11 @@ RESPONSIVE
             padding: 4px 8px;
           }
         }
+      }
+
+      & li:hover::before {
+        background: main.$ColorMain;
+        opacity: 0.6;
       }
   
       & li:nth-child(3) {

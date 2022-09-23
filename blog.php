@@ -21,7 +21,7 @@
                </div>
           </div><!--__search-->
 
-          <div class="__display"> 
+          <div class="__display display_none_mobile"> 
                <div class="__item">
                     <img src="assets/img/bolo.png" alt="Person">
 
@@ -67,6 +67,73 @@
                     </div><!--__information-->
                </div><!--__item-->
           </div><!--__display-->
+
+
+          <!---- SLIDE MOBILE ---->
+
+          <div class="swiper mySwiperArchives display_none_desktop">
+               <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                         <div class="__item">
+                              <img src="assets/img/bolo.png" alt="Person">
+
+                              <div class="__txt">
+                                   <h2>Should I bring cake for colleagues?</h2>
+                                   <a href="">READ MORE >></a>
+                              </div><!--__txt-->
+
+                              <div class="__information">
+                                   <span>August 1, 2020</span>
+                                   <span>|</span>
+                                   <span>No Comments</span>
+                              </div><!--__information-->
+                         </div><!--__item-->
+                    </div><!--swiper-slide-->
+
+                    <div class="swiper-slide">
+                         <div class="__item">
+                              <img src="assets/img/bolo.png" alt="Person">
+
+                              <div class="__txt">
+                                   <h2>Should I bring cake for colleagues?</h2>
+                                   <a href="">READ MORE >></a>
+                              </div><!--__txt-->
+
+                              <div class="__information">
+                                   <span>August 1, 2020</span>
+                                   <span>|</span>
+                                   <span>No Comments</span>
+                              </div><!--__information-->
+                         </div><!--__item-->
+                    </div><!--swiper-slide-->
+
+                    <div class="swiper-slide">
+                         <div class="__item">
+                              <img src="assets/img/bolo.png" alt="Person">
+
+                              <div class="__txt">
+                                   <h2>Should I bring cake for colleagues?</h2>
+                                   <a href="">READ MORE >></a>
+                              </div><!--__txt-->
+
+                              <div class="__information">
+                                   <span>August 1, 2020</span>
+                                   <span>|</span>
+                                   <span>No Comments</span>
+                              </div><!--__information-->
+                         </div><!--__item-->
+                    </div><!--swiper-slide-->
+               
+               </div><!--swiper-wrapper-->
+
+               <div class="__nav">
+                    <div class="center">
+                         <div class="swiper-button-next">➜</div>
+                         <div class="swiper-button-prev">➜</div>
+                    </div><!--center-->
+               </div><!--__nav-->
+          </div><!--swiper-->
 
      </div><!--container-->
 </section><!--archivesBlog-->

@@ -30,14 +30,16 @@ header {
             @include main.FlexBetCen;
     
             & li a {
-              font-size: reset.toRem(16);
+              font-size: reset.toRem(20);
               font-weight: 400;
               color: main.$ColorTwo;
               padding: 10px 20px;
+              transition: 0.3s all;
     
               &.ativo,
               &:hover {
                 color: main.$ColorMain;
+                text-shadow: 1px 1px 1px main.$ColorMain;
               }
             }
           }
@@ -99,34 +101,39 @@ RESPONSIVE
           }
 
           & nav {
-            position: absolute;
+            position: fixed;
             right: 0;
-            top: 38px;
-            width: 200px;
-            background: #ededed;
+            bottom: 63px;
+            width: 100%;
+            background: main.$ColorFour;
             display: flex;
             flex-direction: column;
             opacity: 0;
             z-index: -1;
             visibility: collapse;
             transition: 0.2s all;
-            border-radius: 6px;
-            box-shadow: -2px 1px 9px -4px #000000;
-            border-radius: 5px 5px 5px 5px;
+            box-shadow: 0px -2px 13px 0px #3a9bfa;
+
 
             & ul {
               display: flex;
-              flex-wrap: wrap;
               width: 100%;
+              flex-wrap: wrap;
 
               & li {
-                width: 100%;
+                width: 33%;
+                text-align: center;
 
                 & a {
                   width: 100%;
                   display: block;
                   font-size: reset.toRem(16)!important;
-                  color: main.$ColorOne;
+                  color: main.$ColorTwo;
+                }
+
+                & a:hover {
+                  color: main.$ColorTwo;
+                  opacity: 0.6;
                 }
               }
             }
@@ -152,6 +159,18 @@ RESPONSIVE
           }
         }
       }
+    }
+  }
+}
+
+
+/* MOBILE - 400px*/ 
+@include main.breakpoint(smashMobile) {
+  header .container .__right .__navigation nav ul {
+    justify-content: center;
+
+    & li {
+      width: 100%;
     }
   }
 }

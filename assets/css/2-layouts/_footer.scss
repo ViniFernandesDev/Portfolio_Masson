@@ -34,14 +34,16 @@ footer {
         gap: 0 25px;
 
         & li a {
-          font-size: reset.toRem(16);
+          font-size: reset.toRem(18);
           font-weight: 400;
           color: main.$ColorTwo;
           padding: 10px 20px;
+          transition: 0.3s all;
 
           &.ativo,
           &:hover {
-            color: main.$ColorMain;
+            color: main.$ColorFour;
+            text-shadow: 0 0 4px main.$ColorFour;
           }
         }
       }
@@ -50,6 +52,19 @@ footer {
     & .__social {
       @include main.FlexCenCen;
       gap: 0 25px;
+
+      & a * {
+        color: #ffffff;
+        transition: 0.3s all;
+      }
+
+      & a i {
+        font-size: 25px;
+      }
+
+      & a:hover * {
+        color: main.$ColorFour;
+      }
     }
 }
 

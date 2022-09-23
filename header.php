@@ -22,7 +22,7 @@
                 </div><!--menu_mobile-->
             </div><!--__navigation-->
 
-            <div class="__theme">
+            <div class="__theme" style="display:none;">
                 <i class="uil uil-sun"></i>
             </div><!--__theme-->
         </div><!--__right-->

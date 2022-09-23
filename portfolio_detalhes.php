@@ -42,8 +42,10 @@
             
             <div class="collaborators">
                 <div class="__button">
-                    <i class="uil uil-sun"></i>
-                    Collaborators
+                    <a href="">
+                        <i class="uil uil-sun"></i>
+                        Collaborators
+                    </a>
                 </div><!--__button-->
 
                 <div class="__tooltip">

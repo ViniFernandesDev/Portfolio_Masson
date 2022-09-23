@@ -21,10 +21,10 @@
         </div><!--__navigation-->
 
         <div class="__social">
-            <i class="uil uil-instagram"></i>
-            <i class="uil uil-twitter-alt"></i>
-            <i class="uil uil-whatsapp"></i>
-            <i class="uil uil-linkedin-alt"></i>
+            <a href="#" target="_blank"><i class="uil uil-instagram"></i></a>
+            <a href="#" target="_blank"><i class="uil uil-twitter-alt"></i></a>
+            <a href="#" target="_blank"><i class="uil uil-whatsapp"></i></a>
+            <a href="#" target="_blank"><i class="uil uil-linkedin-alt"></i></a>
         </div><!--__social-->
 
     </div><!--container-->
@@ -44,5 +44,46 @@
         $('.menu_mobile').click(function() {
             $(this).toggleClass("ativo");
         });
+    });
+</script>
+
+<script>
+    var swiper = new Swiper('.mySwiperArchives', {
+        slidesPerView: 1,
+        slidesPerColumn: 2,
+        spaceBetween: 60,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            630: {
+                slidesPerView: 2,
+                spaceBetween: 60,
+            },
+        },
+    });
+</script>
+
+
+<script>
+    var swiper = new Swiper('.mySwiperPorfolio', {
+        slidesPerView: 1,
+        slidesPerColumn: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+            580: {
+                slidesPerView: 2,
+                spaceBetween: 80,
+            },
+            700: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+        },
     });
 </script>

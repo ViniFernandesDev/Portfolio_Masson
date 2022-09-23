@@ -82,6 +82,11 @@
         @include main.paragrafo_2;
         margin-bottom:24px;
       }
+
+      & a:hover {
+        color: #ffffff;
+        transition: 0.3s all;
+      }
     }
 
     & .__information {
@@ -111,7 +116,7 @@ RESPONSIVE
 /* LAPTOP - 1024px*/ 
 @include main.breakpoint(smashLaptop) {
   .archivesBlog {
-    margin: 50px 0;
+    margin: 50px 0!important;
 
     & .__item {
       width: 260px;
@@ -122,6 +127,12 @@ RESPONSIVE
 /* TABLET BIG - 900px*/ 
 @include main.breakpoint(smashTabletBig) {
   .archivesBlog {
+    
+    .__search {
+      justify-content: center;
+      margin-bottom: 25px;
+    }
+
     & .__display {
       margin-top: 20px;
     }

@@ -11,15 +11,47 @@
     font-size: reset.toRem(16);
     font-weight: 300;
     background: main.$ColorMain;
+    border: none;
     color: main.$ColorThree;
     display: inline-block;
     padding: 14px 24px;
     border-radius: 8px;
     cursor: pointer;
+    transition: 0.3s all;
 
     & i {
       padding: 0;
       position: relative;
       left: 8px;      
     }
+}
+
+.button_type1 input,
+.button_type1 a {
+  box-shadow: 0 0 0 main.$ColorMain;
+}
+
+.button_type1 input:hover,
+.button_type1 a:hover {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 #ffffff;
+  }
+
+  50% {
+    box-shadow: 0 0 40px main.$ColorMain;
+  }
+
+  100% {
+    box-shadow: 0 0 0 main.$ColorMain;
+  }
+}
+
+.button_type1 a:hover i,
+.button_type1 a:hover {
+  background: #ffffff;
+  color: main.$ColorMain;
 }

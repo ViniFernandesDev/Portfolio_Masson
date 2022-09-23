@@ -60,13 +60,24 @@
   .inputs .button_type1.--type_submit {
     cursor: pointer;
 
+    & input {
+      padding-right: 40px;
+    }
+
       & i {
         position: relative;
-        left: -26px;
+        left: -40px;
         height: 46px;
         top: 1px;
         padding: 14px 10px;
       }
+    }
+
+    .inputs .button_type1.--type_submit:hover i,
+    .inputs .button_type1.--type_submit:hover input {
+      background: #ffffff;
+      color: main.$ColorMain;
+      
     }
   
 
